@@ -1,1 +1,2 @@
-var g = G$(firstname, lastname, language)
+var g = G$('Roach', 'the Horse');
+console.log(g);
