@@ -24,7 +24,7 @@
   Greetr.prototype = {
 
     fullName: function() {
-      return this.firstname + ' ' + lastname;
+      return this.firstname + ' ' + this.lastname;
     },
 
     validate: function() {
