@@ -21,7 +21,27 @@
     es: 'Inció sesión'
   }
 
-  Greetr.prototype = {};
+  Greetr.prototype = {
+
+    fullName: function() {
+      return this.firstname + ' ' + lastname;
+    },
+
+    validate: function() {
+      if (supportedLangs.indexOf(this.language) === -1) {
+        throw "Invalid language";
+      }
+    },
+
+    greeting: function() {
+      return greetings[this.language] + ' ' + this.firstname + '!';
+    },
+
+    formalGreeting: function() {
+      return formalGreetings[this.language] + ', ' + this.fullName();
+    }
+
+  };
 
   Greetr.init = function(firstname, lastname, language) {
     
